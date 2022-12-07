@@ -10,6 +10,39 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:AdminLoginComponent
+  },
+  
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  
+  {
+    path:"register",
+    component:UserRegisterComponent
+  },
+  {
+    path:"add",
+    component:AddProductComponent
+  },
+  {
+    path:"view",
+    component:ViewProductComponent
+  },
+  {
+    path:"search",
+    component:SearchProductComponent
+  }
+
+]
+
 
 @NgModule({
   declarations: [
@@ -24,7 +57,8 @@ import { SearchProductComponent } from './search-product/search-product.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
