@@ -11,6 +11,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 const myRoute:Routes=[
@@ -52,7 +53,8 @@ const myRoute:Routes=[
     UserLoginComponent,
     AddProductComponent,
     ViewProductComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
