@@ -9,16 +9,26 @@ import { ApiService } from '../api.service';
 export class SearchProductComponent {
 
   name=""
-  searchProduct:any=[]
+
 
   constructor(private api:ApiService){}
+  searchProduct:any=[]
   readValue=()=>
   {
     let data:any={"name":this.name}
     console.log(data)
+
     this.api.searchProduct(data).subscribe(
-      (response:any)=>{
+      (response:any)=>
+      {
         console.log(response)
+        if (response.length==0) {
+          alert("Invalid product name")
+          
+        } else {
+          this.searchProduct=response
+          
+        }
       }
     )
   }
