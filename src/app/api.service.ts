@@ -9,13 +9,13 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   fetchProducts=()=>{
-    return this.http.get("http://localhost:8080/viewall")
+    return this.http.get("http://localhost:8080/view")
   }
   addProducts=(dataToSend:any)=>{
     return this.http.post("http://localhost:8080/add",dataToSend)
   }
-  searchProduct=(data:any)=>{
-     return this.http.post("http://localhost:8080/search",data)
+  searchProduct=(dataToSend:any)=>{
+     return this.http.post("http://localhost:8080/search",dataToSend)
   }
   addRegistration=(dataToSend:any)=>{
      return this.http.post("http://localhost:8080/register",dataToSend)

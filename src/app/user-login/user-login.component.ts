@@ -18,7 +18,7 @@ export class UserLoginComponent {
   {
     let data:any={"email":this.email,"password":this.password}
     console.log(data)
-    if (this.email=="user" && this.password=="1234") {
+    if (this.email=="email" && this.password=="1234") {
       this.route.navigate(['/usersearch'])
       
     } else {
